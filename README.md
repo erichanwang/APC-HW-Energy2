@@ -1,11 +1,8 @@
-# Quartic Oscillator Problem
+# Optional Challenge (Extra Credit)
+2. [Computer] A mass \( m \) confined to the x-axis has potential energy \( U = k x^4 \) with \( k > 0 \).
 
-This project addresses the following problem:
+(a) Sketch this potential energy and qualitatively describe the motion if the mass is initially stationary at \( x = 0 \) and is given a sharp kick to the right at \( t = 0 \).
 
-A mass \( m \) confined to the x-axis has potential energy \( U = k x^4 \) with \( k > 0 \).
+(b) Use \( t = \int \frac{dx}{v(x)} \) to find the time for the mass to reach its maximum displacement \( x_{\max} = A \). Give your answer as an integral over \( x \) in terms of \( m \), \( A \), and \( k \). Hence find the period \( \tau \) of oscillations of amplitude \( A \) as an integral.
 
-(a) Sketch and describe the motion if the mass is initially at rest at \( x = 0 \) and given a sharp kick to the right at \( t = 0 \).
-
-(b) Use the integral expression \( t = \int \frac{dx}{v(x)} \) to find the time for the mass to reach its maximum displacement \( x_{\max} = A \) and thus write the period as an integral.
-
-(c) The integral cannot be expressed in elementary functions; numerically find the period for the case \( m = k = A = 1 \). Provide code.
+(c) The integral from part (b) cannot be evaluated in terms of elementary functions, but it can be done numerically. Find the period for the case that \( m = k = A = 1 \). Be prepared to submit your code along with your result.
