@@ -1,19 +1,16 @@
-import math
-from scipy.integrate import quad
+import mpmath as mp
 
-def period_quartic(m=1.0, Kspring=1.0, A=1.0):
-    C = 4.0 * math.sqrt(m / (2.0 * Kspring))
+# constants
+m, k, A = 1, 1, 1
 
-    # inside the integral
-    def integrand(dx):
-        return 1.0 / math.sqrt(A**4 - dx**4)
+# integrand (thing inside integral)
+f = lambda x: 1/mp.sqrt(A**4 - x**4)
 
-    # integrate from 0 to A
-    integral_value, error_estimate = quad(integrand, 0.0, A)
+# integrate from 0 to A
+I = mp.quad(f, [0, A])
 
-    # return period
-    return C * integral_value
+# period = 4 * sqrt(m/(2k)) * I
+tau = 4*mp.sqrt(m/(2*k)) * I
 
-if __name__ == "__main__":
-    period = period_quartic(m=1.0, Kspring=1.0, A=1.0)
-    print(f"Period of oscillation (m=1, Kspring=1, A=1): {period:.3f}")
+#Period tau = 3.70814935365551
+print(f"Period tau = {float(tau):.3f}")
